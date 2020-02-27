@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Greetings.</title>
+</head>
+<body>
+    {% block h1_text %}Greetings.{% endblock %}
+    {% block form_input %}
+    <form action="/" method="post">
+        <input type="text" name="name" placeholder="Enter your name"/>
+        <input type="submit" value="Submit">
+    </form>
+    {% endblock %}
+</body>
+</html>
