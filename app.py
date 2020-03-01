@@ -42,12 +42,9 @@ def detail_confirmation():
 
 @app.route('/image.jpeg')
 def serve_img():
-    if all(val is not "" for val in session.values()):
-        img = make_pil_image(session.get('person'), session.get('plan'), session.get('date'), session.get('time'), session.get('location'))
-        return serve_pil_image(img)
-    else:
-        flash("You haven't entered everything!")
-        return redirect(url_for('ask_for_details'))
+    img = make_pil_image(session.get('person'), session.get('plan'), session.get('date'), session.get('time'), session.get('location'))
+    return serve_pil_image(img)
+
 
 if __name__ == '__main__':
     app.run()
