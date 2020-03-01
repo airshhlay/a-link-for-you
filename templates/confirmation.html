@@ -1,17 +1,31 @@
 {% extends "base.html" %}
+{% set person = session['person'] %}
+{% set plan = session['plan'] %}
+{% set date = session['date'] %}
+{% set time = session['time'] %}
+{% set location = session['location'] %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>person person person person</title>
 </head>
 <body>
-{% block h1_text %}CONGRATULATIONS!<br>You have succesfully planned a date!{% endblock %}
-{% block para_text %}Now download this image and send it to me!{% endblock %}
-{% block form_input %}
-<form action="{{ url_for('serve_img') }}">
-    <button class="w3-button w3-black w3-block" type="submit">Click Me!</button>
-</form>
-{% endblock %}
+    {% block h1_text %}Proposal{% endblock %}
+    {% block flexible_block %}
+        <div class="w3-large w3-padding w3-center w3-border">
+        <p>I, <b>{{ person }}</b>, confirm that I shall commit to the following with <b>Ash</b>:<p>
+            <br>
+        <p class="w3-left-align">
+            <b>Proposed plan:</b> <u>{{ plan }}</u>
+            <br><br><b>Date:</b> <u>{{ date }}</u>
+            <br><br><b>Time:</b> <u>{{ time }}</u>
+            <br><br><b>Location:</b> <u>{{ location }}</u>
+        </p>
+        <br><br>If I go back on my word, I consent to buying Ash (1) meal
+        <br><br><br>Signed, <u><b><i>{{ person }}</i></b></u>
+        </p>
+        </div>
+    {% endblock %}
 </body>
 </html>

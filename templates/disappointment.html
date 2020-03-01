@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% set person = person %}
+{% set person = session['person'] %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
         <br><i>whispers: you can buy me sashimi.</i>
     {% endblock %}
     {% block form_input %}
-    <form class="w3-container" action="/details" method="get">
+    <form class="w3-container w3-mobile" action="/details" method="get">
          <button class="w3-button w3-black" type="submit">Click to Repent</button>
     </form>
     {% endblock %}

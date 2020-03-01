@@ -1,7 +1,7 @@
 import uuid
 from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-
+import logging
 from image_generator import serve_pil_image, make_pil_image
 
 app = Flask(__name__, static_folder="/templates/static")
@@ -24,7 +24,7 @@ def test():
 
 @app.route('/disappointment')
 def express_disappointment():
-    return render_template('disappointment.html', person=session.get('person'))
+    return render_template('disappointment.html')
 
 @app.route('/details', methods=['GET', 'POST'])
 def ask_for_details():
@@ -33,17 +33,16 @@ def ask_for_details():
         session['date'] = request.form['date']
         session['time'] = request.form['time']
         session['location'] = request.form['location']
-        return redirect(url_for('detail_confirmation'))
-    return render_template('askfordetails.html', person=session.get('person'))
+        return redirect(url_for('success'))
+    return render_template('askfordetails.html')
 
-@app.route('/confirmation', methods=['GET', 'POST'])
-def detail_confirmation():
+@app.route('/success', methods=['GET', 'POST'])
+def success():
+    return render_template('success.html')
+
+@app.route('/confirmation')
+def confirmation():
     return render_template('confirmation.html')
-
-@app.route('/image.jpeg')
-def serve_img():
-    img = make_pil_image(session.get('person'), session.get('plan'), session.get('date'), session.get('time'), session.get('location'))
-    return serve_pil_image(img)
 
 
 if __name__ == '__main__':

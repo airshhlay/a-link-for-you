@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{%  set person = person %}
+{%  set person = session['person'] %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
 <body>
     {% block h1_text %}Fill in the form to gain forgiveness{% endblock %}
     {% block form_input %}
-        <form class="w3-container w3-border" action="/details" method="post">
+        <form class="w3-container w3-border w3-mobile" action="/details" method="post">
             <div>
                 <p><b>What shall we do / eat?</b></p>
                 <input class="w3-input" type="text" name="plan" id="plan" placeholder="enter suggested plan" required>
