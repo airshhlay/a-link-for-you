@@ -7,6 +7,31 @@
     <title>{{ person }} {{ person }} {{ person }}</title>
 </head>
 <body>
-
+    {% block h1_text %}Fill in the form to gain forgiveness{% endblock %}
+    {% block form_input %}
+        <form class="w3-container w3-border" action="/details" method="post">
+            <div>
+                <p><b>What shall we do / eat?</b></p>
+                <input class="w3-input" type="text" name="plan" id="plan" placeholder="enter suggested plan" required>
+                <!-- https://www.webdeveloper.com/d/362569-radio-buttons-with-quototherquot-text-input-option/21 -->
+            </div>
+            <div>
+                <p><b>And where shall we eat / do this?</b></p>
+                <label for="location"></label>
+                <input class="w3-input" type="text" name="location" id="location" placeholder="enter suggested place" required>
+            </div>
+            <div>
+                <p><b>When shall we go out!</b></p>
+                <label for="date">Pick Date</label>
+                <input class='datepicker' type="date" name="date" id="date" required>
+                <label for="time">Pick a time</label>
+                <input type="time" name="time" id="time" required>
+            </div>
+            <div>
+                <br>
+                <input class="w3-button w3-black w3-block" type="submit" value="Let's Go">
+            </div>
+        </form>
+    {% endblock %}
 </body>
 </html>
