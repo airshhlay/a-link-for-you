@@ -1,8 +1,6 @@
 import uuid
 from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-import logging
-from image_generator import serve_pil_image, make_pil_image
 
 app = Flask(__name__, static_folder="/templates/static")
 app.secret_key = uuid.uuid4().hex

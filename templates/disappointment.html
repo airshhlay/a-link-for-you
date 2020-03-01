@@ -7,16 +7,18 @@
     <title>{{ person }} {{ person }} {{ person }}</title>
 </head>
 <body>
+    {% block image_block %}
+        <img src="https://s.yimg.com/ny/api/res/1.2/Wzc13fTCsOzpkOjQ.FmI3g--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/hello_giggles_454/b09a659b35c629a8dc378d7a73e2e740" alt="crying kermit" class="w3-center" style="width:100%;max-width:400px">
+    {% endblock %}
     {% block h1_text %}
     Dear {{ person }}:
     {% endblock %}
     {% block para_text %}You have made me very very sad.<br>
         I have been lonely and left to dry!!!<br>This is all your fault!!<br>Make it up to me!!
-        <br><i>whispers: you can buy me sashimi.</i>
     {% endblock %}
     {% block form_input %}
     <form class="w3-container w3-mobile" action="/details" method="get">
-         <button class="w3-button w3-black" type="submit">Click to Repent</button>
+         <button class="w3-block w3-button w3-black" type="submit">Click to Repent</button>
     </form>
     {% endblock %}
 </body>
