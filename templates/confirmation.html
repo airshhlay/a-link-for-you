@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block h1_text %}CONGRATULATIONS!<br>You have succesfully planned a date!{% endblock %}
+{% block para_text %}Now download this image and send it to me!{% endblock %}
+{% block form_input %}
+<form action="{{ url_for('serve_img') }}">
+    <button class="w3-button w3-black w3-block" type="submit">Click Me!</button>
+</form>
+{% endblock %}
+</body>
+</html>
