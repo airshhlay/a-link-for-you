@@ -6,7 +6,7 @@ from image_generator import serve_pil_image, make_pil_image
 
 app = Flask(__name__, static_folder="/templates/static")
 app.secret_key = uuid.uuid4().hex
-app.debug = True
+app.debug = False
 toolbar = DebugToolbarExtension(app)
 
 @app.route('/', methods=['GET', 'POST'])
