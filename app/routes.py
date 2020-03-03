@@ -1,11 +1,7 @@
-import uuid
-from flask_debugtoolbar import DebugToolbarExtension
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from app import app
 
-app = Flask(__name__, static_folder="/templates/static")
-app.secret_key = uuid.uuid4().hex
-app.debug = False
-toolbar = DebugToolbarExtension(app)
+from flask import render_template, request, redirect, url_for, session
+
 
 @app.route('/', methods=['GET', 'POST'])
 def greetings():
@@ -41,7 +37,3 @@ def success():
 @app.route('/confirmation')
 def confirmation():
     return render_template('confirmation.html')
-
-
-if __name__ == '__main__':
-    app.run()
