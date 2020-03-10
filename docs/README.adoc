@@ -33,4 +33,5 @@ The https://a-link-for-you.herokuapp.com[current deployment] is an extremely sim
 * Upon logging in, check if your friends have filled up the form
 * Sort planned meetups according to date
 * Create customised forms and immutable form fields (eg. set a date that cannot be changed)
+* Use a better CSS template, and make use of better Flask and Python practices
 
