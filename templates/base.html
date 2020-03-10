@@ -19,20 +19,19 @@
 </style>
 <body>
     <div class="bgimg w3-display-container w3-animate-opacity w3-text-black w3-mobile">
-      <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      <div class="w3-display-topleft w3-padding-large w3-xlarge w3-mobile">
       </div>
-      <div class="w3-display-middle">
-        <div class="w3-center">
-        {% block content %}{% endblock %}
+      <div class="w3-display-middle w3-mobile">
+        <div class="w3-center w3-mobile">
         {% block image_block %}{% endblock %}
         </div>
-        <h1 class="w3-jumbo w3-animate-top w3-center">{% block h1_text %}{% endblock %}</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <p class="w3-large w3-center">{% block para_text %}{% endblock %}</p>
+        <h1 class="w3-jumbo w3-animate-top w3-center w3-mobile">{% block h1_text %}{% endblock %}</h1>
+        <hr class="w3-border-grey w3-mobile" style="margin:auto;width:40%">
+        <p class="w3-large w3-center w3-mobile">{% block para_text %}{% endblock %}</p>
       {% block flexible_block %}{% endblock %}
           {% block form_input %}{% endblock %}
       </div>
-      <div class="w3-display-bottomleft w3-padding-large">
+      <div class="w3-display-bottomleft w3-padding-large w3-mobile">
         Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
       </div>
     </div>
