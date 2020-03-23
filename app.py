@@ -1,6 +1,7 @@
 import uuid
 from flask_debugtoolbar import DebugToolbarExtension
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session
+import telegram
 
 app = Flask(__name__, static_folder="/templates/static")
 app.secret_key = uuid.uuid4().hex
@@ -42,6 +43,18 @@ def success():
 def confirmation():
     return render_template('confirmation.html')
 
+@app.route('/send-message', methods=['GET'])
+def send_message():
+    with open ('bot_token', 'r') as f:
+        bot_token = f.readline()
+    with open ('chat_id', 'r') as f:
+        chat_id = f.readline()
+    bot = telegram.Bot(bot_token)
+    bot.sendMessage(chat_id=chat_id, text=construct_message())
+    return render_template('sendmessage.html')
+
+def construct_message():
+    return "Hey! New confirmation from " + session['person'] + ":" + "\nPlan: " + session['plan'] + " \nDate: " + session['date'] + " \nTime: " + session['time'] + " \nPlace: " + session['location']
 
 if __name__ == '__main__':
     app.run()

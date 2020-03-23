@@ -27,6 +27,9 @@
         <br><br><br>Signed, <u><b><i>{{ person }}</i></b></u>
         </p>
         </div>
+        <form action="{{ url_for('send_message') }}">
+            <button class="w3-button w3-black w3-block" type="submit">Click to notify me!</button>
+        </form>
     {% endblock %}
 </body>
 </html>
