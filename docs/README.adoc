@@ -1,0 +1,37 @@
+## Introduction
+
+    "Hey, let's meet up soon!"
+    "Sure!"
+
+
+*And it never happens.*
+
+
+Always find yourself making plans with friends that fall through? Or worse, not even getting to the planning stage?
+
+It's normal. We all lead busy lives.
+
+However, some friends just need that _extra_ push.
+
+It's ok to be annoying sometimes. Make time for the ones that matter, and *make sure they commit to your plans!*
+
+## Current Production Stage
+
+Creating this while simultaneously working on schoolwork is tough.
+The https://a-link-for-you.herokuapp.com[current deployment] is an extremely simplified version of what I'm planning to create.
+
+#### Current version:
+
+* Simple GET/POST forms and HTML template rendering
+* Using W3-CSS template for ease of use
+
+#### Planned changes:
+
+* User functionality to view all your created requests to different friends
+* Database integration to hold and store user data, as well as created requests
+* A special link for each request
+* Upon logging in, check if your friends have filled up the form
+* Sort planned meetups according to date
+* Create customised forms and immutable form fields (eg. set a date that cannot be changed)
+* Use a better CSS template, and make use of better Flask and Python practices
+
