@@ -54,7 +54,7 @@ def send_message():
     return render_template('sendmessage.html')
 
 def construct_message():
-    return "Hey! New confirmation from " + session['person'] + ":" + "\nPlan: " + session['plan'] + " \nDate: " + session['date'] + " \nTime: " + session['time'] + " \nPlace: " + session['location']
+    return "Hey! New confirmation from " + session['person'] + ":" + "\nWe're going to " + session['plan'] + " \non " + session['date'] + " \nat " + session['time'] + " \nat " + session['location']
 
 if __name__ == '__main__':
     app.run()
