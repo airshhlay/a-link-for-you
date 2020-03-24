@@ -24,8 +24,9 @@ The https://a-link-for-you.herokuapp.com[current deployment] is an extremely sim
 
 * Simple GET/POST forms and HTML template rendering
 * Using W3-CSS template for ease of use
+* Utilise Telegram bot API to send myself a notification when someone completes the form
 
-#### Planned changes:
+#### Some ideas for future versions:
 
 * User functionality to view all your created requests to different friends
 * Database integration to hold and store user data, as well as created requests
@@ -34,6 +35,7 @@ The https://a-link-for-you.herokuapp.com[current deployment] is an extremely sim
 * Sort planned meetups according to date
 * Create customised forms and immutable form fields (eg. set a date that cannot be changed)
 * Use a better CSS template, and make use of better Flask and Python practices
+* If continuing Telegram bot usage, allow customisation for the specific user (possibly through the bot itself)
 
 #### References
 Using Redis with Heroku to replace the Flask Session driver: https://stackoverflow.com/questions/13631908/flask-sessions-not-persisting-on-heroku
