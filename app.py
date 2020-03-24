@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import telegram
 
 app = Flask(__name__, static_folder="/templates/static")
-app.secret_key = uuid.uuid4().hex
+app.secret_key = "ashleighisthebest"
 app.debug = False
 toolbar = DebugToolbarExtension(app)
 
