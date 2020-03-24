@@ -35,3 +35,8 @@ The https://a-link-for-you.herokuapp.com[current deployment] is an extremely sim
 * Create customised forms and immutable form fields (eg. set a date that cannot be changed)
 * Use a better CSS template, and make use of better Flask and Python practices
 
+#### References
+Using Redis with Heroku to replace the Flask Session driver: https://stackoverflow.com/questions/13631908/flask-sessions-not-persisting-on-heroku
+
+Flask Mega-Tutorial: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
